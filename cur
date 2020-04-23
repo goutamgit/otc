@@ -4,6 +4,8 @@
         renderer: function(value) {return '<i class="fa fa-comments-o fa-lg devitemdailystatus"></i>'},
         width: '20px'
       }
+  onCellClick($e){
+  //console.log($e.column.header);
   if($e.column.header==''){
     this.devitemObjActivity.devItemId=$e.row.devItemId;
     this.devitemObjActivity.itemSprintName=$e.row.itemSprintName;
@@ -13,4 +15,6 @@
     this.loadDailyScrumActivity($e.row.itemNumber);
    
     $("#devdailystatusmodal").modal();
+  }
+  
   }
